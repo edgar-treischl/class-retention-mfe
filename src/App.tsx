@@ -33,12 +33,6 @@ export default function App() {
     : view === 'trends'
     ? formatNumber(DATASET_SUMMARY.totalRetentions)
     : DATASET_SUMMARY.totalYears.toString()
-    
-  const summaryLabel = view === 'retention' 
-    ? 'school year' 
-    : view === 'trends'
-    ? 'total retentions'
-    : 'years of data'
 
   return (
     <main className="penguins-app">
