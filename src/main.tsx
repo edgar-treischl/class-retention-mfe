@@ -3,7 +3,12 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
 
-createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root')!
+
+document.body.classList.add('penguins-app-body')
+rootElement.classList.add('penguins-app-root')
+
+createRoot(rootElement).render(
   <StrictMode>
     <App />
   </StrictMode>,
