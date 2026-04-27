@@ -12,7 +12,7 @@ export default defineConfig({
       name: 'class-retention-mfe',
       filename: 'remoteEntry.js',
       exposes: {
-        './analyticsApp': './src/App.tsx',
+        './AnalyticsApp': './src/App.tsx',
       },
 
       shared: ['react', 'react-dom']
