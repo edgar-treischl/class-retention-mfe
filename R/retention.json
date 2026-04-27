@@ -1,0 +1,227 @@
+[
+  {
+    "syear": "2024/25",
+    "stype": "Grundschulen",
+    "group": "Insgesamt",
+    "number": 124,
+    "year": "2024",
+    "n_overall": 15673,
+    "percent": 0.79
+  },
+  {
+    "syear": "2024/25",
+    "stype": "Mittelschulen",
+    "group": "Insgesamt",
+    "number": 2654,
+    "year": "2024",
+    "n_overall": 15673,
+    "percent": 16.93
+  },
+  {
+    "syear": "2024/25",
+    "stype": "Realschulen",
+    "group": "Insgesamt",
+    "number": 7874,
+    "year": "2024",
+    "n_overall": 15673,
+    "percent": 50.24
+  },
+  {
+    "syear": "2024/25",
+    "stype": "Gymnasien",
+    "group": "Insgesamt",
+    "number": 5005,
+    "year": "2024",
+    "n_overall": 15673,
+    "percent": 31.93
+  },
+  {
+    "syear": "2024/25",
+    "stype": "Gesamtschulen",
+    "group": "Insgesamt",
+    "number": 16,
+    "year": "2024",
+    "n_overall": 15673,
+    "percent": 0.1
+  },
+  {
+    "syear": "2023/24",
+    "stype": "Grundschulen",
+    "group": "Insgesamt",
+    "number": 118,
+    "year": "2023",
+    "n_overall": 14705,
+    "percent": 0.8
+  },
+  {
+    "syear": "2023/24",
+    "stype": "Mittelschulen",
+    "group": "Insgesamt",
+    "number": 2183,
+    "year": "2023",
+    "n_overall": 14705,
+    "percent": 14.85
+  },
+  {
+    "syear": "2023/24",
+    "stype": "Realschulen",
+    "group": "Insgesamt",
+    "number": 7360,
+    "year": "2023",
+    "n_overall": 14705,
+    "percent": 50.05
+  },
+  {
+    "syear": "2023/24",
+    "stype": "Gymnasien",
+    "group": "Insgesamt",
+    "number": 5012,
+    "year": "2023",
+    "n_overall": 14705,
+    "percent": 34.08
+  },
+  {
+    "syear": "2023/24",
+    "stype": "Gesamtschulen",
+    "group": "Insgesamt",
+    "number": 32,
+    "year": "2023",
+    "n_overall": 14705,
+    "percent": 0.22
+  },
+  {
+    "syear": "2022/23",
+    "stype": "Grundschulen",
+    "group": "Insgesamt",
+    "number": 147,
+    "year": "2022",
+    "n_overall": 15512,
+    "percent": 0.95
+  },
+  {
+    "syear": "2022/23",
+    "stype": "Mittelschulen",
+    "group": "Insgesamt",
+    "number": 2256,
+    "year": "2022",
+    "n_overall": 15512,
+    "percent": 14.54
+  },
+  {
+    "syear": "2022/23",
+    "stype": "Realschulen",
+    "group": "Insgesamt",
+    "number": 7995,
+    "year": "2022",
+    "n_overall": 15512,
+    "percent": 51.54
+  },
+  {
+    "syear": "2022/23",
+    "stype": "Gymnasien",
+    "group": "Insgesamt",
+    "number": 5109,
+    "year": "2022",
+    "n_overall": 15512,
+    "percent": 32.94
+  },
+  {
+    "syear": "2022/23",
+    "stype": "Gesamtschulen",
+    "group": "Insgesamt",
+    "number": 5,
+    "year": "2022",
+    "n_overall": 15512,
+    "percent": 0.03
+  },
+  {
+    "syear": "2021/22",
+    "stype": "Grundschulen",
+    "group": "Insgesamt",
+    "number": 129,
+    "year": "2021",
+    "n_overall": 5211,
+    "percent": 2.48
+  },
+  {
+    "syear": "2021/22",
+    "stype": "Mittelschulen",
+    "group": "Insgesamt",
+    "number": 1472,
+    "year": "2021",
+    "n_overall": 5211,
+    "percent": 28.25
+  },
+  {
+    "syear": "2021/22",
+    "stype": "Realschulen",
+    "group": "Insgesamt",
+    "number": 2151,
+    "year": "2021",
+    "n_overall": 5211,
+    "percent": 41.28
+  },
+  {
+    "syear": "2021/22",
+    "stype": "Gymnasien",
+    "group": "Insgesamt",
+    "number": 1458,
+    "year": "2021",
+    "n_overall": 5211,
+    "percent": 27.98
+  },
+  {
+    "syear": "2021/22",
+    "stype": "Gesamtschulen",
+    "group": "Insgesamt",
+    "number": 1,
+    "year": "2021",
+    "n_overall": 5211,
+    "percent": 0.02
+  },
+  {
+    "syear": "2020/21",
+    "stype": "Grundschulen",
+    "group": "Insgesamt",
+    "number": 81,
+    "year": "2020",
+    "n_overall": 2265,
+    "percent": 3.58
+  },
+  {
+    "syear": "2020/21",
+    "stype": "Mittelschulen",
+    "group": "Insgesamt",
+    "number": 873,
+    "year": "2020",
+    "n_overall": 2265,
+    "percent": 38.54
+  },
+  {
+    "syear": "2020/21",
+    "stype": "Realschulen",
+    "group": "Insgesamt",
+    "number": 695,
+    "year": "2020",
+    "n_overall": 2265,
+    "percent": 30.68
+  },
+  {
+    "syear": "2020/21",
+    "stype": "Gymnasien",
+    "group": "Insgesamt",
+    "number": 613,
+    "year": "2020",
+    "n_overall": 2265,
+    "percent": 27.06
+  },
+  {
+    "syear": "2020/21",
+    "stype": "Gesamtschulen",
+    "group": "Insgesamt",
+    "number": 3,
+    "year": "2020",
+    "n_overall": 2265,
+    "percent": 0.13
+  }
+]

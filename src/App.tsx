@@ -1,43 +1,51 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { DatasetView } from './components/DatasetView.tsx'
 import { ExplorerView } from './components/ExplorerView.tsx'
+import { InfoView } from './components/InfoView.tsx'
 import {
   DATASET_SUMMARY,
-  filterPenguins,
-  getMetric,
-  type MetricKey,
-  type SpeciesFilter,
-} from './penguins.ts'
+  SCHOOL_YEARS,
+  formatNumber,
+  type SchoolYear,
+} from './retention.ts'
 import './App.css'
 
 const VIEW_OPTIONS = [
-  { key: 'explorer', label: 'Explorer' },
-  { key: 'dataset', label: 'Dataset' },
+  { key: 'retention', label: 'Retention Rates' },
+  { key: 'trends', label: 'Trends Over Time' },
+  { key: 'data', label: 'Data Info' },
 ] as const
 
 type ViewKey = (typeof VIEW_OPTIONS)[number]['key']
 
 export default function App() {
-  const [view, setView] = useState<ViewKey>('explorer')
-  const [speciesFilter, setSpeciesFilter] = useState<SpeciesFilter>('All species')
-  const [xMetricKey, setXMetricKey] = useState<MetricKey>('flipperLength')
-  const [yMetricKey, setYMetricKey] = useState<MetricKey>('bodyMass')
+  const [view, setView] = useState<ViewKey>('retention')
+  const [selectedYear, setSelectedYear] = useState<SchoolYear>(SCHOOL_YEARS[0])
 
-  const filteredPenguins = useMemo(() => filterPenguins(speciesFilter), [speciesFilter])
-  const xMetric = getMetric(xMetricKey)
-  const yMetric = getMetric(yMetricKey)
-
-  const title = view === 'explorer' ? 'Explorer' : 'Dataset'
-  const summaryValue =
-    view === 'explorer' ? filteredPenguins.length.toLocaleString() : DATASET_SUMMARY.totalRows.toLocaleString()
-  const summaryLabel = view === 'explorer' ? 'visible samples' : 'rows in source'
+  const title = view === 'retention' 
+    ? 'Retention Rates' 
+    : view === 'trends'
+    ? 'Trends Over Time'
+    : 'Data Information'
+    
+  const summaryValue = view === 'retention' 
+    ? selectedYear
+    : view === 'trends'
+    ? formatNumber(DATASET_SUMMARY.totalRetentions)
+    : DATASET_SUMMARY.totalYears.toString()
+    
+  const summaryLabel = view === 'retention' 
+    ? 'school year' 
+    : view === 'trends'
+    ? 'total retentions'
+    : 'years of data'
 
   return (
     <main className="penguins-app">
       <section className="panel">
         <header className="panel-header">
           <div>
-            <p className="eyebrow">Palmer Penguins</p>
+            <p className="eyebrow">German School System</p>
             <h1>{title}</h1>
           </div>
           <div className="summary-chip">
@@ -59,18 +67,15 @@ export default function App() {
           ))}
         </nav>
 
-        {view === 'explorer' ? (
+        {view === 'retention' ? (
           <ExplorerView
-            filteredPenguins={filteredPenguins}
-            speciesFilter={speciesFilter}
-            xMetric={xMetric}
-            yMetric={yMetric}
-            onSpeciesFilterChange={setSpeciesFilter}
-            onXMetricChange={setXMetricKey}
-            onYMetricChange={setYMetricKey}
+            selectedYear={selectedYear}
+            onYearChange={setSelectedYear}
           />
-        ) : (
+        ) : view === 'trends' ? (
           <DatasetView datasetSummary={DATASET_SUMMARY} />
+        ) : (
+          <InfoView />
         )}
       </section>
     </main>
