@@ -42,19 +42,19 @@ export function ExplorerView({
     <>
       <section className="stats-row" aria-label="Year-over-year changes">
         <section className="stat-card">
-          <span className="stat-label">Grundschulen vs prev. year</span>
+          <span className="stat-label">Grundschulen compared to prev. year</span>
           <strong className={grundschuleChange === null ? '' : grundschuleChange > 0 ? 'stat-increase' : grundschuleChange < 0 ? 'stat-decrease' : ''}>
             {grundschuleChange === null ? 'N/A' : `${grundschuleChange > 0 ? '+' : ''}${grundschuleChange}%`}
           </strong>
         </section>
         <section className="stat-card">
-          <span className="stat-label">Realschulen vs prev. year</span>
+          <span className="stat-label">Realschulen compared to prev. year</span>
           <strong className={realschuleChange === null ? '' : realschuleChange > 0 ? 'stat-increase' : realschuleChange < 0 ? 'stat-decrease' : ''}>
             {realschuleChange === null ? 'N/A' : `${realschuleChange > 0 ? '+' : ''}${realschuleChange}%`}
           </strong>
         </section>
         <section className="stat-card">
-          <span className="stat-label">Gymnasien vs prev. year</span>
+          <span className="stat-label">Gymnasien compared to prev. year</span>
           <strong className={gymnasienChange === null ? '' : gymnasienChange > 0 ? 'stat-increase' : gymnasienChange < 0 ? 'stat-decrease' : ''}>
             {gymnasienChange === null ? 'N/A' : `${gymnasienChange > 0 ? '+' : ''}${gymnasienChange}%`}
           </strong>

@@ -12,7 +12,7 @@ import './App.css'
 
 const VIEW_OPTIONS = [
   { key: 'retention', label: 'Retention Rates' },
-  { key: 'trends', label: 'Trends Over Time' },
+  { key: 'trends', label: 'Time Trends' },
   { key: 'data', label: 'Data Info' },
 ] as const
 
@@ -25,7 +25,7 @@ export default function App() {
   const title = view === 'retention' 
     ? 'Retention Rates' 
     : view === 'trends'
-    ? 'Trends Over Time'
+    ? 'Time Trends'
     : 'Data Information'
     
   const summaryValue = view === 'retention' 
@@ -45,12 +45,12 @@ export default function App() {
       <section className="panel">
         <header className="panel-header">
           <div>
-            <p className="eyebrow">German School System</p>
+            <p className="eyebrow">Demo: Bayerns Schule in Zahlen</p>
             <h1>{title}</h1>
           </div>
           <div className="summary-chip">
-            <strong>{summaryValue}</strong>
-            <span>{summaryLabel}</span>
+            <strong>School Year:</strong>
+            <span>{summaryValue}</span>
           </div>
         </header>
 
