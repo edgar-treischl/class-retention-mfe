@@ -1,79 +1,79 @@
-.penguins-app {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --panel-bg: #fff;
-  --border: #e5e4e7;
-  --accent: #aa3bff;
-  --grid-line: rgba(107, 99, 117, 0.18);
-  --shadow:
+.class-retention-mfe {
+  /* Scoped CSS Custom Properties */
+  --class-retention-text: #6b6375;
+  --class-retention-heading: #08060d;
+  --class-retention-bg: #fff;
+  --class-retention-surface: #fff;
+  --class-retention-elevated: #fff;
+  --class-retention-border: #e5e4e7;
+  --class-retention-accent: #aa3bff;
+  --class-retention-grid-line: rgba(107, 99, 117, 0.18);
+  --class-retention-shadow:
     rgba(15, 23, 42, 0.08) 0 10px 20px -12px, rgba(15, 23, 42, 0.06) 0 4px 10px -6px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --class-retention-font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --class-retention-font-heading: system-ui, 'Segoe UI', Roboto, sans-serif;
 
-  font: 16px/1.5 var(--sans);
+  /* Modern fluid typography with clamp() */
+  font: clamp(15px, 1vw + 14px, 16px) / 1.5 var(--class-retention-font-sans);
   letter-spacing: 0.18px;
   color-scheme: light;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--class-retention-text);
+  background: var(--class-retention-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
-.penguins-app,
-.penguins-app * {
+/* Component-scoped box-sizing */
+.class-retention-mfe,
+.class-retention-mfe * {
   box-sizing: border-box;
 }
 
-.penguins-app-body {
+.class-retention-mfe__body {
   margin: 0;
 }
 
-.penguins-app-root {
+.class-retention-mfe__root {
   min-height: 100svh;
 }
 
-.penguins-app {
+.class-retention-mfe {
   width: 100%;
-  color: var(--text);
-  background: var(--bg);
+  color: var(--class-retention-text);
+  background: var(--class-retention-bg);
 }
 
-.penguins-app h1,
-.penguins-app h2 {
-  font-family: var(--heading);
+.class-retention-mfe h1,
+.class-retention-mfe h2 {
+  font-family: var(--class-retention-font-heading);
   font-weight: 600;
-  color: var(--text-h);
+  color: var(--class-retention-heading);
 }
 
-.penguins-app h1 {
+.class-retention-mfe h1 {
   margin: 0;
   font-size: clamp(2rem, 3vw, 2.75rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
 
-.penguins-app h2 {
+.class-retention-mfe h2 {
   margin: 0;
   font-size: 1.1rem;
   line-height: 1.2;
 }
 
-.penguins-app p {
+.class-retention-mfe p {
   margin: 0;
 }
 
-.penguins-app button,
-.penguins-app input,
-.penguins-app select,
-.penguins-app textarea {
+.class-retention-mfe button,
+.class-retention-mfe input,
+.class-retention-mfe select,
+.class-retention-mfe textarea {
   font: inherit;
-  color: var(--text-h);
+  color: var(--class-retention-heading);
 }

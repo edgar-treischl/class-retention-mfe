@@ -69,46 +69,46 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
   
   return (
     <>
-      <section className="dataset-info">
-        <div className="info-grid">
-          <div className="info-card">
-            <span className="info-label">Years tracked: </span>
-            <strong className="info-value">{datasetSummary.totalYears}</strong>
+      <section className="class-retention-mfe__dataset-info">
+        <div className="class-retention-mfe__info-grid">
+          <div className="class-retention-mfe__info-card">
+            <span className="class-retention-mfe__info-label">Years tracked: </span>
+            <strong className="class-retention-mfe__info-value">{datasetSummary.totalYears}</strong>
           </div>
-          <div className="info-card">
-            <span className="info-label">Total retentions: </span>
-            <strong className="info-value">{formatNumber(datasetSummary.totalRetentions)}</strong>
+          <div className="class-retention-mfe__info-card">
+            <span className="class-retention-mfe__info-label">Total retentions: </span>
+            <strong className="class-retention-mfe__info-value">{formatNumber(datasetSummary.totalRetentions)}</strong>
           </div>
-          <div className="info-card">
-            <span className="info-label">Year range: </span>
-            <strong className="info-value">{datasetSummary.yearRange}</strong>
+          <div className="class-retention-mfe__info-card">
+            <span className="class-retention-mfe__info-label">Year range: </span>
+            <strong className="class-retention-mfe__info-value">{datasetSummary.yearRange}</strong>
           </div>
-          <div className="info-card">
-            <span className="info-label">Latest year: </span>
-            <strong className="info-value">{datasetSummary.latestYear}</strong>
+          <div className="class-retention-mfe__info-card">
+            <span className="class-retention-mfe__info-label">Latest year: </span>
+            <strong className="class-retention-mfe__info-value">{datasetSummary.latestYear}</strong>
           </div>
         </div>
       </section>
 
-      <section className="split-layout">
-        <div className="split-text">
-          <div className="story-card">
+      <section className="class-retention-mfe__split-layout">
+        <div className="class-retention-mfe__split-text">
+          <div className="class-retention-mfe__story-card">
             <h3>📈 The COVID-19 Impact on Grade Retention</h3>
-            <p className="story-text">
+            <p className="class-retention-mfe__story-text">
               Did the COVID-19 pandemic fundamentally disrupted grade retention patterns?
               Notice the <strong>sharp drop in 2020/21</strong> when schools implemented emergency policies allowing most 
               students to advance regardless of performance. By 2021/22, retention numbers began climbing back toward 
               pre-pandemic levels.
             </p>
-            <p className="story-text">
+            <p className="class-retention-mfe__story-text">
               <strong>Mittelschulen experienced the most dramatic swings</strong>, jumping from ~870 retentions in 2020 
               to over 2,600 by 2024. This volatility reflects both policy changes and the educational disruption faced 
               by students in vocational tracks during remote learning.
             </p>
           </div>
           
-          <div className="story-card">
-            <p className="story-text">
+          <div className="class-retention-mfe__story-card">
+            <p className="class-retention-mfe__story-text">
               <strong>💡 Reading this chart:</strong> Each line represents a school type. The dip in 2020-2021 
               shows pandemic policy effects, while the recovery shows a return to traditional retention patterns. 
               Use the year range controls below to focus on specific time periods.
@@ -116,19 +116,19 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
           </div>
         </div>
 
-        <div className="split-chart">
-          <div className="chart-card">
-            <div className="card-heading">
+        <div className="class-retention-mfe__split-chart">
+          <div className="class-retention-mfe__chart-card">
+            <div className="class-retention-mfe__card-heading">
               <div>
                 <h2>Retention Trends Over Time</h2>
                 <p>Number of students repeating a grade by school type ({minYear}-{maxYear})</p>
               </div>
             </div>
 
-            <div className="chart-frame">
+            <div className="class-retention-mfe__chart-frame">
           <svg
             viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
-            className="chart"
+            className="class-retention-mfe__chart"
             role="img"
             aria-label="Line chart showing retention trends over time by school type"
           >
@@ -142,9 +142,9 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
                     x2={CHART_WIDTH - CHART_PADDING.right}
                     y1={y}
                     y2={y}
-                    className="grid-line"
+                    className="class-retention-mfe__grid-line"
                   />
-                  <text x={CHART_PADDING.left - 10} y={y + 4} className="axis-label axis-label-y">
+                  <text x={CHART_PADDING.left - 10} y={y + 4} className="class-retention-mfe__axis-label class-retention-mfe__axis-label--y">
                     {formatNumber(tick)}
                   </text>
                 </g>
@@ -160,7 +160,7 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
                   x={x}
                   y={CHART_HEIGHT - CHART_PADDING.bottom + 24}
                   textAnchor="middle"
-                  className="axis-label"
+                  className="class-retention-mfe__axis-label"
                 >
                   {year}
                 </text>
@@ -173,14 +173,14 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
               x2={CHART_WIDTH - CHART_PADDING.right}
               y1={CHART_HEIGHT - CHART_PADDING.bottom}
               y2={CHART_HEIGHT - CHART_PADDING.bottom}
-              className="axis-line"
+              className="class-retention-mfe__axis-line"
             />
             <line
               x1={CHART_PADDING.left}
               x2={CHART_PADDING.left}
               y1={CHART_PADDING.top}
               y2={CHART_HEIGHT - CHART_PADDING.bottom}
-              className="axis-line"
+              className="class-retention-mfe__axis-line"
             />
 
             {/* Axis labels */}
@@ -188,7 +188,7 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
               x={CHART_WIDTH / 2}
               y={CHART_HEIGHT - 10}
               textAnchor="middle"
-              className="axis-title"
+              className="class-retention-mfe__axis-title"
               style={{ fontSize: '14px', fontWeight: 500 }}
             >
               School Year
@@ -197,7 +197,7 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
               x={-CHART_HEIGHT / 2}
               y={20}
               textAnchor="middle"
-              className="axis-title"
+              className="class-retention-mfe__axis-title"
               transform={`rotate(-90, 20, ${CHART_HEIGHT / 2})`}
               style={{ fontSize: '14px', fontWeight: 500 }}
             >
@@ -244,27 +244,27 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
             </div>
 
             {/* Legend */}
-            <div className="chart-legend">
+            <div className="class-retention-mfe__chart-legend">
               {SCHOOL_TYPES.map((schoolType) => (
-                <div key={schoolType} className="legend-item">
+                <div key={schoolType} className="class-retention-mfe__legend-item">
                   <div
-                    className="legend-color"
+                    className="class-retention-mfe__legend-color"
                     style={{ backgroundColor: SCHOOL_TYPE_COLORS[schoolType] }}
                   />
-                  <span className="legend-label">{schoolType}</span>
+                  <span className="class-retention-mfe__legend-label">{schoolType}</span>
                 </div>
               ))}
             </div>
 
             {/* Year range controls */}
-            <div className="controls-section">
-              <div className="control-group">
-                <label htmlFor="min-year-select" className="control-label">
+            <div className="class-retention-mfe__controls-section">
+              <div className="class-retention-mfe__control-group">
+                <label htmlFor="min-year-select" className="class-retention-mfe__control-label">
                   From year
                 </label>
                 <select
                   id="min-year-select"
-                  className="control-select"
+                  className="class-retention-mfe__control-select"
                   value={minYear}
                   onChange={(e) => setMinYear(parseInt(e.target.value))}
                 >
@@ -276,13 +276,13 @@ export function DatasetView({ datasetSummary }: DatasetViewProps) {
                 </select>
               </div>
 
-              <div className="control-group">
-                <label htmlFor="max-year-select" className="control-label">
+              <div className="class-retention-mfe__control-group">
+                <label htmlFor="max-year-select" className="class-retention-mfe__control-label">
                   To year
                 </label>
                 <select
                   id="max-year-select"
-                  className="control-select"
+                  className="class-retention-mfe__control-select"
                   value={maxYear}
                   onChange={(e) => setMaxYear(parseInt(e.target.value))}
                 >

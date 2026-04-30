@@ -35,25 +35,25 @@ export default function App() {
     : DATASET_SUMMARY.totalYears.toString()
 
   return (
-    <main className="penguins-app">
-      <section className="panel">
-        <header className="panel-header">
+    <main className="class-retention-mfe">
+      <section className="class-retention-mfe__panel">
+        <header className="class-retention-mfe__panel-header">
           <div>
-            <p className="eyebrow">Demo: Bayerns Schule in Zahlen</p>
+            <p className="class-retention-mfe__eyebrow">Demo: Bayerns Schule in Zahlen</p>
             <h1>{title}</h1>
           </div>
-          <div className="summary-chip">
+          <div className="class-retention-mfe__summary-chip">
             <strong>School Year:</strong>
             <span>{summaryValue}</span>
           </div>
         </header>
 
-        <nav className="view-switch" aria-label="View selector">
+        <nav className="class-retention-mfe__view-switch" aria-label="View selector">
           {VIEW_OPTIONS.map((option) => (
             <button
               key={option.key}
               type="button"
-              className={option.key === view ? 'view-tab is-active' : 'view-tab'}
+              className={option.key === view ? 'class-retention-mfe__view-tab class-retention-mfe__view-tab--active' : 'class-retention-mfe__view-tab'}
               onClick={() => setView(option.key)}
             >
               {option.label}

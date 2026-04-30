@@ -5,8 +5,8 @@ import App from './App.tsx'
 
 const rootElement = document.getElementById('root')!
 
-document.body.classList.add('penguins-app-body')
-rootElement.classList.add('penguins-app-root')
+document.body.classList.add('class-retention-mfe__body')
+rootElement.classList.add('class-retention-mfe__root')
 
 createRoot(rootElement).render(
   <StrictMode>

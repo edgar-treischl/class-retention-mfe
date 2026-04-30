@@ -40,45 +40,45 @@ export function ExplorerView({
 
   return (
     <>
-      <section className="stats-row" aria-label="Year-over-year changes">
-        <section className="stat-card">
-          <span className="stat-label">Grundschulen compared to prev. year</span>
-          <strong className={grundschuleChange === null ? '' : grundschuleChange > 0 ? 'stat-increase' : grundschuleChange < 0 ? 'stat-decrease' : ''}>
+      <section className="class-retention-mfe__stats-row" aria-label="Year-over-year changes">
+        <section className="class-retention-mfe__stat-card">
+          <span className="class-retention-mfe__stat-label">Grundschulen compared to prev. year</span>
+          <strong className={grundschuleChange === null ? '' : grundschuleChange > 0 ? 'class-retention-mfe__stat-increase' : grundschuleChange < 0 ? 'class-retention-mfe__stat-decrease' : ''}>
             {grundschuleChange === null ? 'N/A' : `${grundschuleChange > 0 ? '+' : ''}${grundschuleChange}%`}
           </strong>
         </section>
-        <section className="stat-card">
-          <span className="stat-label">Realschulen compared to prev. year</span>
-          <strong className={realschuleChange === null ? '' : realschuleChange > 0 ? 'stat-increase' : realschuleChange < 0 ? 'stat-decrease' : ''}>
+        <section className="class-retention-mfe__stat-card">
+          <span className="class-retention-mfe__stat-label">Realschulen compared to prev. year</span>
+          <strong className={realschuleChange === null ? '' : realschuleChange > 0 ? 'class-retention-mfe__stat-increase' : realschuleChange < 0 ? 'class-retention-mfe__stat-decrease' : ''}>
             {realschuleChange === null ? 'N/A' : `${realschuleChange > 0 ? '+' : ''}${realschuleChange}%`}
           </strong>
         </section>
-        <section className="stat-card">
-          <span className="stat-label">Gymnasien compared to prev. year</span>
-          <strong className={gymnasienChange === null ? '' : gymnasienChange > 0 ? 'stat-increase' : gymnasienChange < 0 ? 'stat-decrease' : ''}>
+        <section className="class-retention-mfe__stat-card">
+          <span className="class-retention-mfe__stat-label">Gymnasien compared to prev. year</span>
+          <strong className={gymnasienChange === null ? '' : gymnasienChange > 0 ? 'class-retention-mfe__stat-increase' : gymnasienChange < 0 ? 'class-retention-mfe__stat-decrease' : ''}>
             {gymnasienChange === null ? 'N/A' : `${gymnasienChange > 0 ? '+' : ''}${gymnasienChange}%`}
           </strong>
         </section>
       </section>
 
-      <section className="split-layout">
-        <div className="split-text">
-          <div className="story-card">
+      <section className="class-retention-mfe__split-layout">
+        <div className="class-retention-mfe__split-text">
+          <div className="class-retention-mfe__story-card">
             <h3>📊 Understanding Grade Retention</h3>
-            <p className="story-text">
+            <p className="class-retention-mfe__story-text">
               This visualization shows how many students repeat grades across different school types in the German education system. 
               The data reveals striking patterns: <strong>Realschulen account for about half of all grade repetitions</strong>, 
               despite being "middle-tier" schools. This reflects the challenge many students face in this intermediate track.
             </p>
-            <p className="story-text">
+            <p className="class-retention-mfe__story-text">
               <strong>Why does this matter?</strong> Grade retention has long-term impacts on student outcomes, self-esteem, 
               and educational trajectories. The high retention rates in Realschulen and Gymnasien suggest that academic 
               standards in these schools may create significant barriers for struggling students.
             </p>
           </div>
           
-          <div className="story-card">
-            <p className="story-text">
+          <div className="class-retention-mfe__story-card">
+            <p className="class-retention-mfe__story-text">
               <strong>💡 Key Insight:</strong> Realschulen show the highest retention rate, 
               reflecting the academic pressure in this intermediate track. The year-over-year changes 
               (shown below each bar) reveal whether retention is increasing or decreasing compared to the previous year.
@@ -86,9 +86,9 @@ export function ExplorerView({
           </div>
         </div>
 
-        <div className="split-chart">
-          <div className="chart-card">
-            <div className="card-heading">
+        <div className="class-retention-mfe__split-chart">
+          <div className="class-retention-mfe__chart-card">
+            <div className="class-retention-mfe__card-heading">
               <div>
                 <h2>Grade Retention by School Type</h2>
                 <p>
@@ -97,10 +97,10 @@ export function ExplorerView({
               </div>
             </div>
 
-            <div className="chart-frame">
+            <div className="class-retention-mfe__chart-frame">
               <svg
                 viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
-                className="chart"
+                className="class-retention-mfe__chart"
                 role="img"
                 aria-label={`Bar chart showing retention rates for ${selectedYear}`}
               >
@@ -114,13 +114,13 @@ export function ExplorerView({
                         x2={x}
                         y1={CHART_PADDING.top}
                         y2={CHART_HEIGHT - CHART_PADDING.bottom}
-                        className="grid-line"
+                        className="class-retention-mfe__grid-line"
                       />
                       <text
                         x={x}
                         y={CHART_HEIGHT - CHART_PADDING.bottom + 24}
                         textAnchor="middle"
-                        className="axis-label"
+                        className="class-retention-mfe__axis-label"
                       >
                         {tick}%
                       </text>
@@ -134,14 +134,14 @@ export function ExplorerView({
                   x2={CHART_WIDTH - CHART_PADDING.right}
                   y1={CHART_HEIGHT - CHART_PADDING.bottom}
                   y2={CHART_HEIGHT - CHART_PADDING.bottom}
-                  className="axis-line"
+                  className="class-retention-mfe__axis-line"
                 />
                 <line
                   x1={CHART_PADDING.left}
                   x2={CHART_PADDING.left}
                   y1={CHART_PADDING.top}
                   y2={CHART_HEIGHT - CHART_PADDING.bottom}
-                  className="axis-line"
+                  className="class-retention-mfe__axis-line"
                 />
 
                 {/* Axis labels */}
@@ -149,7 +149,7 @@ export function ExplorerView({
                   x={CHART_WIDTH / 2}
                   y={CHART_HEIGHT - 10}
                   textAnchor="middle"
-                  className="axis-title"
+                  className="class-retention-mfe__axis-title"
                   style={{ fontSize: '14px', fontWeight: 500 }}
                 >
                   Retention Rate (%)
@@ -174,7 +174,7 @@ export function ExplorerView({
                         x={CHART_PADDING.left - 10}
                         y={y + barHeight / 2 + 5}
                         textAnchor="end"
-                        className="axis-label"
+                        className="class-retention-mfe__axis-label"
                         style={{ fontSize: '13px' }}
                       >
                         {item.type}
@@ -182,7 +182,7 @@ export function ExplorerView({
                       <text
                         x={CHART_PADDING.left + width + 10}
                         y={y + barHeight / 2 + 5}
-                        className="bar-label"
+                        className="class-retention-mfe__bar-label"
                         style={{ fontSize: '14px', fontWeight: 600 }}
                       >
                         {formatPercent(item.percent)}
@@ -193,14 +193,14 @@ export function ExplorerView({
               </svg>
             </div>
 
-            <div className="controls-section">
-              <div className="control-group">
-                <label htmlFor="year-select" className="control-label">
+            <div className="class-retention-mfe__controls-section">
+              <div className="class-retention-mfe__control-group">
+                <label htmlFor="year-select" className="class-retention-mfe__control-label">
                   School year
                 </label>
                 <select
                   id="year-select"
-                  className="control-select"
+                  className="class-retention-mfe__control-select"
                   value={selectedYear}
                   onChange={(e) => onYearChange(e.target.value)}
                 >
